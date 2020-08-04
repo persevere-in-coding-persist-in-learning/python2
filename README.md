@@ -1,6 +1,6 @@
 # Python 2.7 学习
 ## 一、Python简介
-### .. 1.Python的历史
+### 1.Python的历史
 ### 2.Python的优缺点
 ### 3.Python的应用领域
 ## 二、Python环境搭建
