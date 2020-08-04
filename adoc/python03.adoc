@@ -1,4 +1,4 @@
-:imagesdir: adoc/assets/images/
+:imagesdir: ../adoc/assets/images/
 
 == 三、Python开发利器Anaconda+PyCharm
 
@@ -245,9 +245,9 @@ image::p09.png[]
 
 II.绑定 Anaconda 默认的base环境
 
-image::p10.png[]
+image::p10.png[图.10 下载安装PyCharm]
 
-image::p11.png[]
+image::p11.png[图.11 绑定 Anaconda 默认的base环境]
 
 image::p12.png[]
 

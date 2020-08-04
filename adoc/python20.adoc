@@ -1,4 +1,4 @@
-:imagesdir: adoc/assets/images/
+:imagesdir: ../adoc/assets/images/
 
 == 五、Python基本语法
 
