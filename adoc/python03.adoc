@@ -1,0 +1,264 @@
+:imagesdir: assets/images/
+
+== 三、Python开发利器Anaconda+PyCharm
+
+=== 1、什么是Anaconda？
+
+* 简介
+
+** Anaconda（官方网站）就是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda包含了conda、Python在内的超过180个科学包及其依赖项。
+
+* 特点
+
+** Anaconda具有如下特点：
+
+. 开源
+
+. 安装过程简单
+
+. 高性能使用Python和R语言
+
+. 免费的社区支持
+
+. 其特点的实现主要基于Anaconda拥有的:
+
+.. conda包
+
+.. 环境管理器
+
+.. 1,000+开源库
+
+.. 如果日常工作或学习并不必要使用1,000多个库，那么可以考虑安装Miniconda（图形界面下载及命令行安装请戳）link:https://docs.conda.io/en/latest/miniconda.html[miniconda] ，这里不过多介绍Miniconda的安装及使用。
+
+=== 2、Anaconda、conda、pip、virtualenv的区别
+
+① Anaconda
+
+Anaconda是一个包含180+的科学包及其依赖项的发行版本。其包含的科学包包括：conda, numpy, scipy, ipython notebook等。
+
+② conda
+
+conda是包及其依赖项和环境的管理工具。
+
+适用语言：Python, R, Ruby, Lua, Scala, Java, JavaScript, C/C++, FORTRAN。
+
+适用平台：Windows, macOS, Linux
+
+用途：
+
+快速安装、运行和升级包及其依赖项。
+
+在计算机中便捷地创建、保存、加载和切换环境。
+
+如果你需要的包要求不同版本的Python，你无需切换到不同的环境，因为conda同样是一个环境管理器。仅需要几条命令，你可以创建一个完全独立的环境来运行不同的Python版本，同时继续在你常规的环境中使用你常用的Python版本。——conda官方网站
+
+conda为Python项目而创造，但可适用于上述的多种语言。
+
+conda包和环境管理器包含于Anaconda的所有版本当中。
+
+③ pip pip是用于安装和管理软件包的包管理器。
+
+pip编写语言：Python。
+
+Python中默认安装的版本：
+
+Python 2.7.9及后续版本：默认安装，命令为pip
+
+Python 3.4及后续版本：默认安装，命令为pip3
+
+pip名称的由来：pip采用的是递归缩写进行命名的。其名字被普遍认为来源于2处：
+
+“Pip installs Packages”（“pip安装包”）
+
+“Pip installs Python”（“pip安装Python”）
+
+④ virtualenv
+
+virtualenv：用于创建一个独立的Python环境的工具。
+
+解决问题：
+
+当一个程序需要使用Python 2.7版本，而另一个程序需要使用Python 3.6版本，如何同时使用这两个程序？
+
+如果将所有程序都安装在系统下的默认路径，如：/usr/lib/python2.7/site-packages，当不小心升级了本不该升级的程序时，将会对其他的程序造成影响。
+
+如果想要安装程序并在程序运行时对其库或库的版本进行修改，都会导致程序的中断。
+
+在共享主机时，无法在全局site-packages目录中安装包。
+
+virtualenv将会为它自己的安装目录创建一个环境，这并不与其他virtualenv环境共享库；同时也可以选择性地不连接已安装的全局库。
+
+⑤ pip 与 conda 比较
+
+→ 依赖项检查
+
+pip：
+
+不一定会展示所需其他依赖包。 安装包时或许会直接忽略依赖项而安装，仅在结果中提示错误。
+
+conda：
+
+列出所需其他依赖包。 安装包时自动安装其依赖项。
+
+可以便捷地在包的不同版本中自由切换。
+
+→ 环境管理
+
+pip：维护多个环境难度较大。
+
+conda：比较方便地在不同环境之间进行切换，环境管理较为简单。
+
+→ 对系统自带Python的影响
+
+pip：在系统自带Python中包的**更新/回退版本/卸载将影响其他程序。
+
+conda：不会影响系统自带Python。
+
+→ 适用语言
+
+pip：仅适用于Python。
+
+conda：适用于Python, R, Ruby, Lua, Scala, Java, JavaScript, C/C++, FORTRAN。
+
+⑥ conda与pip、virtualenv的关系
+
+conda结合了pip和virtualenv的功能。
+
+=== 3、下载Anaconda并安装
+
+****
+
+I.下载Anaconda
+
+image:: p05.png[anaconda]
+
+
+II. 安装Anaconda
+
+下载后单击安装完成后在命令行输入 conda，出现入下图提示，则说明安装成功
+
+image::p06.png[anaconda]
+
+****
+
+=== 4、Conda基本命令
+
+环境管理命令:::
+
+****
+``创建新的python环境$ conda create --name myenv
+``
+
+``并且还可以指定python的版本：$ conda create -n myenv python=3.7
+``
+
+``创建新环境并指定包含的库：$ conda create -n myenv scipy
+``
+
+``并且还可以指定库的版本：$ conda create -n myenv scipy=0.15.0
+``
+
+``复制环境：$ conda create --name myclone --clone myenv
+``
+
+``查看是不是复制成功了：$ conda info --envs
+``
+
+``激活、进入某个环境：$ source activate myenv
+``
+
+``退出环境：$ conda deactivate / $ source deactivate
+``
+
+``删除环境：$ conda remove --name myenv --all
+``
+
+``查看当前的环境列表$ conda info --envs / $ conda env list
+``
+****
+
+包/库管理命令:::
+
+****
+
+``查看conda版本：$ conda --version
+``
+
+``更新conda版本：$ conda update conda / anaconda
+``
+
+``查看都安装了那些依赖库：$ conda list
+``
+
+``更新所有库 $ conda update --all
+``
+
+``查看某个环境下安装的库：$ conda list -n myenv
+``
+
+``查找包：$ conda search <package>
+``
+
+``安装包：$ conda install <package>
+``
+
+``安装到指定环境：$ conda install -n myenv <package>
+``
+
+``更新包：$ conda update <package>
+``
+
+``删除包：$ conda remove <package>
+``
+
+****
+
+=== 5、创建自己的虚拟环境
+
+创建版本为3.7 的Python环境
+
+ $ conda create -n python37  python=3.7
+
+image::p07.png[]
+
+
+查看环境是否创建成功 conda env list
+
+image::p08.png[]
+
+. base环境就是默认的环境；
+
+. python37环境就是我们刚刚创建的Python版本为3.7的环境；
+
+. python27环境就是我们刚刚创建的Python版本为2.7的环境；
+
+=== 6、切换虚拟环境
+
+ 启动虚拟环境 $ conda activate learn
+ 关闭虚拟环境 $ conda deactivate
+
+=== 7、前往 PyCharm 下载安装即可
+
+I.下载安装PyCharm
+
+image::p09.png[]
+
+II.绑定 Anaconda 默认的base环境
+
+image::p10.png[]
+
+image::p11.png[]
+
+image::p12.png[]
+
+III.编写Python程序
+
+image::p13.png[]
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+:imagesdir: /assets/images
+
+== 二、Python环境搭建
+
+=== 1.Python开发工具简介
+
+* CPython
+
+** 当我们从Python官方网站下载并安装好Python 2.7后，我们就直接获得了一个官方版本的解释器：CPython。这个解释器是用C语言开发的，所以叫CPython。在命令行下运行python就是启动CPython解释器。
+
+* IPython
+
+** IPython是基于CPython之上的一个交互式解释器，也就是说，IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的。好比很多国产浏览器虽然外观不同，但内核其实都是调用了IE。
+
+** CPython用>>>作为提示符，而IPython用In [序号]:作为提示符。
+
+* PyPy
+
+** PyPy是另一个Python解释器，它的目标是执行速度。PyPy采用JIT技术，对Python代码进行动态编译（注意不是解释），所以可以显著提高Python代码的执行速度。
+
+
+* Jython
+
+** Jython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。
+
+* IronPython
+
+** IronPython和Jython类似，只不过IronPython是运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码。
+
+* PyCharm
+
+** PyCharm是由JetBrains公司开发的提供给Python专业的开发者的一个集成开发环境，它最大的优点是能够大大提升Python开发者的工作效率，为开发者集成了很多用起来非常顺手的功能，包括代码调试、高亮语法、代码跳转、智能提示、自动补全、单元测试、版本控制等等。此外，PyCharm还提供了对一些高级功能的支持，包括支持基于Django框架的Web开发、。
+
+=== 2.Python下载
+
+****
+Python最新源码，二进制文档，新闻资讯等可以在Python的官网查看到：
+
+Python官网: https://www.python.org/
+
+你可以在以下链接中下载 Python 的文档，你可以下载 HTML、PDF 和 PostScript 等格式的文档。
+
+Python文档下载地址: https://www.python.org/doc/
+****
+
+=== 3.Python安装
+
+****
+Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。
+
+您需要下载适用于您使用平台的二进制代码，然后安装Python。
+
+如果您平台的二进制代码是不可用的，你需要使用C编译器手动编译源代码。
+
+编译的源代码，功能上有更多的选择性， 为python安装提供了更多的灵活性。
+
+以下是各个平台安装包的下载地址以及版本：
+****
+
+版本
+
+image::p01.png[version]
+
+平台
+
+image::p02.png[system]
+
+=== 4.环境变量配置
+
+****
+程序和可执行文件可以在许多目录，而这些路径很可能不在操作系统提供可执行文件的搜索路径中。
+
+path(路径)存储在环境变量中，这是由操作系统维护的一个命名的字符串。这些变量包含可用的命令行解释器和其他程序的信息。
+
+Unix或Windows中路径变量为PATH（UNIX区分大小写，Windows不区分大小写）。
+****
+
+image::p03.png[system]
+
+=== 5.运行python
+
+在终端输入 python 如果看到相应的python版本
+
+image::p04.png[run]
+
+
