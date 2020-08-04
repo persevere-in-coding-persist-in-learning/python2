@@ -1,6 +1,6 @@
 == 一、Python简介
 
-:imagesdir: assets/images/
+:imagesdir: adoc/assets/images/
 
 === 1.Python的历史
 

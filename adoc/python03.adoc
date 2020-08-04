@@ -1,4 +1,4 @@
-:imagesdir: assets/images/
+:imagesdir: adoc/assets/images/
 
 == 三、Python开发利器Anaconda+PyCharm
 
