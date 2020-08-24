@@ -1,11 +1,28 @@
 = Python学习笔记
 JiangZhou Hui <huijz8117@gmail.com>
 v1.0, 2020-07-31
+//文档类型
+:doctype: book
 //生成相应的目录结构
 :toc:
+//目录名称
 :toc-title: 目录
+//目录位置
+:toc: left
 //目录的层级
 :toclevels: 5
+//文档关键字
+:keywords: Python,Python 笔记
+//作者
+:author: jiangzhou hui
+//作者首字母简写，大写
+:authorinitials: HJZ
+//作者邮箱
+:email: huijz8117@gmail.com
+//文档版本
+:revnumber: v1.0
+//文档版本日期
+:revdate: 2020-07-30
 
 include::python01.adoc[一、Python简介]
 include::python02.adoc[二、Python开发环境搭建]
@@ -13,6 +30,7 @@ include::python03.adoc[三、Python开发利器 Anaconda+PyCharm]
 include::python10.adoc[四、Python语言元素]
 include::python20.adoc[五、Python基本语法]
 include::python30.adoc[六、Python运算符]
+include::python40.adoc[七、Python程序控制结构]
 
 
 
