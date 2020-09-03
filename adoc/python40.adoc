@@ -58,6 +58,81 @@ include::../chapter04/ifelse.py[lines=49..53]
 
 === 3.循环结构
 
+==== 3.1 循环语句
+循环语句允许我们执行一个语句或语句组多次，下面是在大多数编程语言中的循环语句的一般形式：
+
+image::image-2020-08-31-11-27-10-415.png[循环结构]
+
+Python 提供了 for 循环和 while 循环（在 Python 中没有 do..while 循环）:
+
+|===
+|循环类型|描述
+
+|while 循环
+|在给定的判断条件为 true 时执行循环体，否则退出循环体。
+
+|for 循环
+|重复执行语句
+
+|嵌套循环
+|你可以在while循环体中嵌套for循环
+
+|===
+
+==== 3.2循环控制语句
+|===
+|控制语句|描述
+
+|break 语句
+|在语句块执行过程中终止循环，并且跳出整个循环
+
+|continue 语句
+|在语句块执行过程中终止当前循环，跳出该次循环，执行下一次循环。
+
+|pass 语句
+|pass是空语句，是为了保持程序结构的完整性。
+
+|===
+
+==== 3.3 Python for 循环语句
+Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串。
+
+*语法*：
+
+for循环的语法格式如下：
+
+ for iterating_var in sequence:
+   statements(s)
+
+image::image-2020-09-02-14-17-21-853.png[for循环流程图]
+
+[source,python,indent=0]
+----
+
+include::../chapter05/for_example.py[lines=9..32]
+
+----
+
+==== 3.4 Python While 循环语句
+Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为：
+
+  while 判断条件(condition)：
+    执行语句(statements)……
+
+执行语句可以是单个语句或语句块。判断条件可以是任何表达式，任何非零、或非空（null）的值均为true。
+
+当判断条件假 false 时，循环结束。
+
+
+image::image-2020-09-02-14-57-09-190.png[]
+
+
+[source,python,indent=0]
+----
+
+include::../chapter05/while_example.py[lines=8..57]
+
+----
 
 
 
